@@ -1,7 +1,6 @@
 import streamlit as st
 import page_start
 import page_text_processing
-import page_image_processing
 import page_audio_processing
 import page_transcription
 import page_configuration
@@ -14,7 +13,6 @@ def main():
     views = {
         "page_start": page_start.display_page_start,
         "page_text_processing": page_text_processing.display_page_text_processing,
-        "page_image_processing": page_image_processing.display_page_image_processing,
         "page_audio_processing": page_audio_processing.display_page_audio_processing,
         "page_transcription": page_transcription.display_page_transcription,
         "page_configuration": page_configuration.display_page_configuration,
