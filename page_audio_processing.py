@@ -3,7 +3,6 @@ from mutagen import File
 import math
 import io
 import utils
-
 def upload_audio_file(max_size_bytes=25 * 1_000_000):
     """Handles the upload of an audio file and validates its size."""
     audio_file = st.file_uploader("Upload an audio file.", type=['mp3', 'mp4', 'mpeg', 'mpga', 'm4a', 'wav', 'webm'])

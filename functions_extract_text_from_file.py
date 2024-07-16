@@ -15,7 +15,6 @@ def extract_text_from_text_box(text):
 def extract_text_from_pdf(file_like_object, text_preprocessing_function):
     text_and_pages = {"pages": []}
     character_count = 0
-
     try:
         # Read from the file-like object
         reader = PyPDF2.PdfReader(file_like_object)
