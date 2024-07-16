@@ -181,9 +181,6 @@ def display_page_run():
         if st.session_state.current_main_path == "text":
             utils.page_navigation_button_grid("Datenverarbeitung abbrechen", "weiter zum Ergebnis", "page_start", "page_results", 
                                               col_widths=[7.8, 0.1, 1.1],return_visible_condition=True,continue_visible_condition=False,reset_session_state_on_back_activation=True)
-        if st.session_state.current_main_path == "image":
-            utils.page_navigation_button_grid("Datenverarbeitung abbrechen", "weiter zum Ergebnis", "page_start", "page_results", 
-                                              col_widths=[7.8, 0.1, 1.1],return_visible_condition=True,continue_visible_condition=False,reset_session_state_on_back_activation=True)
         if st.session_state.current_main_path == "audio":
             utils.page_navigation_button_grid("Datenverarbeitung abbrechen", "weiter zum Ergebnis", "page_configuration", "page_results", 
                                               col_widths=[7.8, 0.1, 1.1],return_visible_condition=True,continue_visible_condition=False,reset_session_state_on_back_activation=False)
@@ -208,9 +205,6 @@ def display_page_run():
     if st.session_state.api_processing_complete:
         st.success("Verarbeitung abgeschlossen")
         if st.session_state.current_main_path == "text":
-            utils.page_navigation_button_grid("Datenverarbeitung abbrechen", "weiter zum Ergebnis", "page_start", "page_results", 
-                                              col_widths=[1, 1.5, 0.85],return_visible_condition=False,continue_visible_condition=True,reset_session_state_on_back_activation=True)
-        if st.session_state.current_main_path == "image":
             utils.page_navigation_button_grid("Datenverarbeitung abbrechen", "weiter zum Ergebnis", "page_start", "page_results", 
                                               col_widths=[1, 1.5, 0.85],return_visible_condition=False,continue_visible_condition=True,reset_session_state_on_back_activation=True)
         if st.session_state.current_main_path == "audio":

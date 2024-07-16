@@ -44,7 +44,5 @@ def display_page_configuration():
     display_metrics(st.session_state.character_count, st.session_state.chunk_size)
     if st.session_state.current_main_path == "text":
         utils.page_navigation_button_grid("Zurück", "Datenverarbeitung starten", "page_text_processing", "page_run", col_widths=[0.25, 0.1, 1])
-    if st.session_state.current_main_path == "image":
-        utils.page_navigation_button_grid("Zurück", "Datenverarbeitung starten", "page_image_processing", "page_run", col_widths=[0.25, 0.1, 1])
     if st.session_state.current_main_path == "audio":
         utils.page_navigation_button_grid("Zurück", "Datenverarbeitung starten", "page_transcription", "page_run", col_widths=[0.25, 0.1, 1])
