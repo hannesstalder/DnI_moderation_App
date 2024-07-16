@@ -1,5 +1,4 @@
 import streamlit as st
-import streamlit as st
 import functions_extract_text_from_file
 import functions_extract_text_from_url
 from urllib.parse import urlparse
