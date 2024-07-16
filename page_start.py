@@ -3,7 +3,7 @@ import hashlib
 from utils import print_heading
 
 # Configuration
-HASHED_ASSISTANT_ID = "1fc3832b0f490d78702b4294e4b840e14fa915799ad50db84ae3b7a2459c2f7c"
+HASHED_ASSISTANT_ID = "20fe50f76dc1c37d919faed2fcce6767c00bb2a88eb05cea0bbb75869ad0bcf5"
 HASHED_API_KEY = "bfcd83fd14ac440be4c6b107c70ef1ff4aac26cd4d37a3151c676a007efdb234"
 
 def create_section(title, description, button_name, page_name):
@@ -13,8 +13,6 @@ def create_section(title, description, button_name, page_name):
     if st.button(button_name):
         if page_name == "page_text_processing":
             st.session_state.current_main_path = "text"
-        if page_name == "page_image_processing":
-            st.session_state.current_main_path = "image"
         if page_name == "page_audio_processing":
             st.session_state.current_main_path = "audio"
         st.session_state.current_view = page_name
@@ -61,7 +59,7 @@ def display_page_start():
 
     if st.session_state.authorized:
         st.divider()
-        col1, col2, col3 = st.columns(3)
+        col1, col2 = st.columns(2)
         with col1:
             create_section(
                 "Textverarbeitung",
@@ -70,13 +68,6 @@ def display_page_start():
                 "page_text_processing"
             )
         with col2:
-            create_section(
-                "Bildverarbeitung",
-                "Lade bis zu 10 Bilder hoch oder extrahiere Bilder von einer Website.",
-                "weiter zur Bildverarbeitung",
-                "page_image_processing"
-            )
-        with col3:
             create_section(
                 "Audioverarbeitung",
                 "Lade eine mp3 oder eine mp4 Datei hoch, um eine Audiospur zu prüfen.",

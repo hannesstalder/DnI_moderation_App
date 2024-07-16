@@ -53,5 +53,4 @@ def initialize_session_state():
         if key not in st.session_state:
             st.session_state[key] = value
 
-if __name__ == "__main__":
-    main()
+main()
