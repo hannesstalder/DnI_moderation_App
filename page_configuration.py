@@ -7,7 +7,7 @@ def estimate_metrics(character_count, chunk_size):
     input_token_price = 5 / 1e6
     output_token_price = 15 / 1e6
 
-    base_input_characters = 1100
+    base_input_characters = 2511
     base_output_characters = 300
 
     estimated_time_per_chunk = 4.5
